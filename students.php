@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,10 +7,11 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Document</title>
+    <title>Student Management System using jquery ajax without page reload</title>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
 </head>
 <body>
-    <!-- Modal -->
+    <!-- Add Student -->
     <div class="modal fade" id="studentAddModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -19,6 +21,8 @@
             </div>
             <form id="saveStudent">
                 <div class="modal-body">
+                    <div id="errorMessage" class="alert alert-warning d-none"></div>
+
                     <div class="mb-3">
                         <label for="">Name</label>
                         <input type="text" name="name" class="form-control" />
@@ -35,10 +39,10 @@
                         <label for="">Course</label>
                         <input type="text" name="course" class="form-control" />
                     </div>
-                    <div class="mb-3">
-                        <label for="">Name</label>
-                        <input type="text" name="name" class="form-control" />
-                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save Student</button>
                 </div>
             </form>
             
